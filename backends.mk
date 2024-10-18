@@ -302,7 +302,7 @@ ifeq (ippcrypto,$(firstword $(MAKECMDGOALS)))
 	ifeq ($(uname -m),x86_64)
 		CFLAGS += -mavx2 -mbmi2 -mpopcnt -g
 	endif
-	CFLAGS += -Wno-uninitialized
+	CFLAGS += -Wno-uninitialized -DIPPCP_PREVIEW_LMS
 
 	# Static link for lnx
 	ifeq ($(UNAME_S),Linux)
