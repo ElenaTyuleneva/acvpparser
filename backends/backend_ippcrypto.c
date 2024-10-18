@@ -691,7 +691,6 @@ static int ippcp_rsa_keygen_en(struct buffer *ebuf, uint32_t modulus, void **pri
                                        0, pPrimeG, ippsPRNGenRDRAND, pPRNG);
             if(ippStsInsufficientEntropy == sts) {
 			    logger(LOGGER_WARN, "ippStsInsufficientEntropy\n");
-                e0_data += 2;
                 continue;
             }
             else {
